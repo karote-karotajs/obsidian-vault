@@ -1,0 +1,1 @@
+`.` - point to current directory in any command, `..` - point to parent directory

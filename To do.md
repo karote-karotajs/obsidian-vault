@@ -1,0 +1,1 @@
+- [ ] Pārkopēt Obsidian vault no Windows uz Linux
