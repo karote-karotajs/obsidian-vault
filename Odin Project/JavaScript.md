@@ -298,3 +298,61 @@ let sayHi = function () {
 `SyntaxError` - sintakses kļūdas
 `TypeError` - operators mēģina apstrādāt nepareiza tipa datus
 
+## Loops and Arrays
+
+Lai izpildītu instrukcijas vairākkārt, izmanto loop. Izmantojot loop, bieži būs jāizmanto kolekcija ar mainīgajiem, viens tiem - `Array`.  Parasti izmanto `for... of` loop. Tas iet cauri kādai kārtībai ar vērtībām.
+
+![[Pasted image 20251214164613.png]]
+
+Šeit tiek izveidots `Array` ar nosaukumu `cats`, kurā ir trīs string tipa vērtības. For loop šeit iet cauri array, un iedod mainīgajam cat vērtību, atkarībā no tā, kurā reizē tiek izmantots for loop. Pēc tam, for loop izpilda kodu, kas ir iekavās. Mainīgajam nav obligāti jābūt kodā pēc tam!
+
+Ar `map()` var izmainīt katru no array vērtībām, piem. izveidot funkciju, kas string mainīgo izmaina uz upper case.
+
+![[Pasted image 20251214171148.png]]
+
+Šeit tiek izveidota funkcija, kas pārvērš string tipa mainīgos lielajos burtos. Ar `mainīgais.map(funkcija)` katra array vērtība tiek izlaista cauri funkcijai, un funkcijas return tiek atgriezts un ievietots atpakaļ array.
+
+`filter()`, savukārt, ir nepieciešams, lai funkcija atgriež boolean tipa vērtību. Ja funkcija atgriež `True`, tad array vērtība tiek iekļauta jaunajā array.
+
+For loop standarta sintakse ir sekojoša:
+
+```
+for (initializer; condition; final-expression) {
+  code
+}
+```
+
+Initializer - parasti mainīgais, kas ir skaitlis, kas tiek inkrementēts, lai noteiktu, cik reizes tiek izpildīts loop, to var arī saukt par skaitītāja mainīgo.
+Condition - nosaka, kad for loop ir jābeidzas, vērtībai ir jābūt `True`, lai loop turpinātos. Parasti tas ir salīdzinājums, kam jāatgriež `False`, lai izietu ārā no loop.
+Final-expression - tiek izpildīts katru reizi, kad tiek izpildīts for loop.
+
+![[Pasted image 20251214174044.png]]
+
+Initializer vietā var arī likt jebkuru citu mainīgo. Pēc tam, kamēr i ir mazāks par 10, for loop tiek pildīts. Katru reizi, kad tiek izpildīts loop cikls, i tiek inkrementēts.
+
+![[Pasted image 20251214174218.png]]
+
+Šis tiek atgriezts konsolē.
+
+Ar `break` var iziet ārā no loop, ja izpildās kāds apstāklis. Savukārt, ar `continue` var turpināt ar nākošo loop, piem.
+
+`while` loop, savukārt, ir tikai viens mainīgais - apstāklis, kurš, kamēr atgriež vērtību `True`, izpilda kodu, kas ir figūriekavās.
+
+```
+while (condition) {
+	code
+}
+```
+
+`do while` loop kods tiek izpildīts vismaz vienu reizi, jo apstāklis tiek definēts pēc tam.
+
+```
+initializer
+do {
+code
+} while (condition)
+```
+
+Labels for break/continue - ja ir cilpas cilpās, tad ar label var izmantot break vai continue ārpus iekšējās cilpas.
+
+
